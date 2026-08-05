@@ -24,6 +24,8 @@ nav {
     padding-left: $padding-lateral;
     padding-right: $padding-lateral;
     height: 60px;
+    background-color: $color-fondo;
+    font-size: 1rem;
 
     ul {
         display: flex;
@@ -42,7 +44,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 8rem $padding-lateral 5rem;
+    padding: 6rem $padding-lateral 5rem;
     min-height: 100vh;
 
     h1 {
@@ -57,11 +59,81 @@ nav {
         margin-bottom: 2rem;
     }
 
-    p {
-        font-size: 0.8rem;
-        letter-spacing: 0.1rem;
+    p:first-of-type {
+        font-size: 1rem;
+        letter-spacing: 0.4em;
         text-transform: uppercase;
-        color: $color-violeta1;
+        color: #c084fc;
         margin-bottom: 1.5rem;
+    }
+
+    p:last-of-type {
+        font-size: 1.1rem;
+        color: rgba(240, 240, 255, 0.65);
+        line-height: 1.75;
+        max-width: 480px;
+        font-weight: 300;
+        margin-bottom: 2rem;
+    }
+
+    .herofooter {
+        display: flex;
+        gap: 4rem;
+        justify-content: space-between;
+        align-items: center;
+
+        .botonhero {
+            display: flex;
+            gap: 2rem;
+
+            a:first-of-type {
+                text-decoration: none;
+                padding: 1rem 2rem;
+                font-size: 1.5rem;
+                border-radius: 0.3rem;
+                background: linear-gradient(130deg, $color-violeta1, $color-violeta2);
+                color: $color-textoclaro;
+                &:hover {
+                transform: translateY(-2px);
+                opacity: 0.85;
+            }
+            }
+
+            a:last-of-type {
+                text-decoration: none;
+                padding: 1rem 2rem;
+                font-size: 1.5rem;
+                border-radius: 0.3rem;
+                background-color: rgba(255, 255, 255, 0.08);
+                color: $color-textoclaro;
+                &:hover {
+                transform: translateY(-2px);
+                opacity: 0.85;
+            }
+            }
+        }
+
+        .datoshero {
+            display: flex;
+            gap: 3rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+
+            div {
+                padding: 1.25rem 1.5rem;
+                background-color: rgba(255, 255, 255, 0.07);
+                backdrop-filter: blur(20px);
+                border: 1px solid rgba(255, 255, 255, 0.15);
+            }
+
+            .numdatos {
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+
+            .textodatos {
+                font-size: 1rem;
+            }
+        }
     }
 }
